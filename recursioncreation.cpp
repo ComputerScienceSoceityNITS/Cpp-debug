@@ -1,16 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+// create a recursive funtion of the following logic given in the main function.
+int res = 1;
+void recursion(int n)
+{
+    if (n == 0)
+        return;
+    res *= n;
+    recursion(n - 1);
+}
 
-//create a recursive funtion of the following logic given in the main function.
-
-int main(){
-    int n ;
-    cout<<"Enter the number : ";
-    cin>>n;
-    int ans = 1; 
-    for(int i = n ; i  >= 1 ;i--){
-        ans = ans * i;   
-    }
-    cout<<ans<<endl;
+int main()
+{
+    int n;
+    cout << "Enter the number : ";
+    cin >> n;
+    recursion(n);
+    cout << res << endl;
 }
