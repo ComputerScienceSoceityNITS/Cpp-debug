@@ -4,6 +4,18 @@
 
 using namespace std;
 
+int Add(int a,int b){
+    return a+b;
+}
+int Sub(int a,int b){
+    return a-b;
+}
+int Mul(int a,int b){
+    return a*b;
+}
+int Div(int a,int b){
+    return a/b;
+}
 int main() {
     // Declare variables
     float num1, num2, result;
@@ -22,20 +34,20 @@ int main() {
     // Perform calculation
     switch(op) {
         case '+':
-            result = num1 + num2;
+            result = Add(num1,num2);
             break;
         case '-':
-            result = num1 - num2;
+            result = Sub(num1,num2);
             break;
         case '*':
-            result = num1 * num2;
+            result = Mul(num1,num2);
             break;
         case '/':
             if (num2 == 0) {
                 cerr << "Error: division by zero\n";
                 return 1;
             }
-            result = num1 / num2;
+            result = Div(num1,num2);
             break;
         default:
             cerr << "Error: invalid operator\n";
