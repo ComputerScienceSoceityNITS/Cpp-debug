@@ -22,20 +22,17 @@ int main() {
     // Perform calculation
     switch(op) {
         case '+':
-            result = num1 + num2;
+            result = add(num1,num2);
             break;
         case '-':
-            result = num1 - num2;
+            result = sub(num1,num2);
             break;
         case '*':
-            result = num1 * num2;
+            result = mul(num1,num2);
             break;
         case '/':
-            if (num2 == 0) {
-                cerr << "Error: division by zero\n";
-                return 1;
-            }
-            result = num1 / num2;
+            
+            result = di(num1,num2);
             break;
         default:
             cerr << "Error: invalid operator\n";
@@ -47,4 +44,29 @@ int main() {
          << num1 << " " << op << " " << num2 << " = " << result << endl;
 
     return 0;
+}
+// separate functions for operators
+int add(int num1,int num2){
+
+int sum = num1 + num2;
+return sum;
+}
+int sub(int num1,int num2){
+
+int s = num1 - num2;
+return s;
+}
+int mul(int num1,int num2){
+
+int m = num1 * num2;
+return m;
+}
+int di(int num1,int num2){
+    if (num2 == 0) {
+                cerr << "Error: division by zero\n";
+                return 1;
+            }
+
+int d = num1/num2;
+return d;
 }
