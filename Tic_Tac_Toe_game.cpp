@@ -34,7 +34,7 @@ void takeTurn() {
 
 void switchPlayer() {
    if (player == 'X') {
-      player = 'X';
+      player = 'O';// switched bug player x and o
    } else {
       player = 'O';
    }
@@ -47,10 +47,13 @@ bool checkWin() {
          return true;
       }
    }
-
-   
-
-   // Check diagonals for a win
+   // Check columns for a win
+    for (int i = 0; i < 3; i++) {
+        if (board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+            return true;
+        }
+    }
+// Check diagonals for a win
    if (board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
       return true;
    }
