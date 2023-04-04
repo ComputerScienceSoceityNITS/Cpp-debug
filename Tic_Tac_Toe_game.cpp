@@ -47,6 +47,13 @@ bool checkWin() {
          return true;
       }
    }
+   //Check cols for a win
+   for (int i = 0; i < 3; i++) {
+      if (board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
+         return true;
+      }
+   }
+
 
    
 
