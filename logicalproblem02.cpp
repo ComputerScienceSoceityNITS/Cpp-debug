@@ -3,7 +3,11 @@ using namespace std;
 
 bool check(char a, char b)
 {
-    // write the function here
+    unordered_set<char> s;
+    s.insert(a);
+    s.insert(b);
+    if(s.size() == 1) return true;
+    else return false;
 }
 
 int main()
