@@ -3,8 +3,16 @@
 using namespace std;
 string insert_space(string text)
 {
-    // write the function code here
+    for(long long i = 1;i<text.size();i++)
+    {
+        string blank = " ";
+        if((text[i] <=90 && text[i-1] >=97) ){
+        text.insert(i,blank);
+    }
+    }
+    return text;
 }
+
 
 int main()
 {
