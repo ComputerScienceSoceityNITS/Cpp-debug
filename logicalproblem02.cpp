@@ -3,7 +3,10 @@ using namespace std;
 
 bool check(char a, char b)
 {
-    // write the function here
+    if(a==b){
+        return true;
+    }
+    return false;
 }
 
 int main()
