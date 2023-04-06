@@ -42,7 +42,7 @@ int main() {
             return 1;
     }
 
-    // Display result
+    // Display result here
     cout << setprecision(numeric_limits<double>::max_digits10) // Show all significant digits
          << num1 << " " << op << " " << num2 << " = " << result << endl;
 
