@@ -47,7 +47,12 @@ bool checkWin() {
          return true;
       }
    }
-
+   // check for vertical win
+   for (int j = 0; j < 3; j++) {
+      if (board[0][j] == board[1][j] && board[1][j] == board[2][j]) {  // #8 corrected here
+         return true;
+      }
+   }
    
 
    // Check diagonals for a win
