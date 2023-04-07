@@ -3,6 +3,29 @@
 #include <limits> // for numeric_limits
 
 using namespace std;
+// Function to add two numbers
+float add(float num1, float num2) {
+    return num1 + num2;
+}
+
+// Function to subtract two numbers
+float subtract(float num1, float num2) {
+    return num1 - num2;
+}
+
+// Function to multiply two numbers
+float multiply(float num1, float num2) {
+    return num1 * num2;
+}
+
+// Function to divide two numbers
+float divide(float num1, float num2) {
+    if (num2 == 0) {
+        cerr << "Error: division by zero\n";
+        return numeric_limits<float>::quiet_NaN(); // return NaN if division by zero
+    }
+    return num1 / num2;
+}
 
 int main() {
     // Declare variables
@@ -19,23 +42,41 @@ int main() {
     cout << "Enter second number: ";
     cin >> num2;
 
-    // Perform calculation
+    // // Perform calculation
+    // switch(op) {
+    //     case '+':
+    //         result = num1 + num2;
+    //         break;
+    //     case '-':
+    //         result = num1 - num2;
+    //         break;
+    //     case '*':
+    //         result = num1 * num2;
+    //         break;
+    //     case '/':
+    //         if (num2 == 0) {
+    //             cerr << "Error: division by zero\n";
+    //             return 1;
+    //         }
+    //         result = num1 / num2;
+    //         break;
+    //     default:
+    //         cerr << "Error: invalid operator\n";
+    //         return 1;
+    // }
+    // Perform calculation based on operator
     switch(op) {
         case '+':
-            result = num1 + num2;
+            result = add(num1, num2);
             break;
         case '-':
-            result = num1 - num2;
+            result = subtract(num1, num2);
             break;
         case '*':
-            result = num1 * num2;
+            result = multiply(num1, num2);
             break;
         case '/':
-            if (num2 == 0) {
-                cerr << "Error: division by zero\n";
-                return 1;
-            }
-            result = num1 / num2;
+            result = divide(num1, num2);
             break;
         default:
             cerr << "Error: invalid operator\n";
