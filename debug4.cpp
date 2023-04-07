@@ -3,17 +3,9 @@ using namespace std;
 
 int q(int arr[], int l, int r, int x)
 {
-    if (r >= l)
+    for(int i=l; i<r; ++i)
     {
-        int o = l + (r - l) / 2;
-
-        if (arr[o] == x)
-            return o;
-
-        if (arr[o] > x)
-            return q(arr, l, o - 1, x);
-
-        return q(arr, o + 1, r, x);
+        if(arr[i]==x){return i;}
     }
 
     return -1;
