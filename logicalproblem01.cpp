@@ -20,10 +20,32 @@ int main()
     {
         int a, b;
         cin >> a >> b;
-
-//complete the code
-
-
+        int mid=abs(a-b)/2;
+        if(a==b){
+            cout<<"YES"<<'\n';
+        }
+        else{
+            if(a>b){
+                a-=mid;
+                b+=mid;
+                if(a==b){
+                    cout<<"YES"<<'\n';
+                }
+                else{
+                    cout<<"NO"<<'\n';
+                }
+            }
+            else{
+                b-=mid;
+                a+=mid;
+                if(a==b){
+                    cout<<"YES"<<'\n';
+                }
+                else{
+                    cout<<"NO"<<'\n';
+                }
+            }
+        }
     }
     return 0;
 }
