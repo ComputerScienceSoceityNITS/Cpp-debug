@@ -15,9 +15,10 @@ int main(){
     int n ;
     cout<<"Enter the number : ";
     cin>>n;
-    int ans = 1; 
-    for(int i = n ; i  >= 1 ;i--){
-        ans = ans * i;   
-    }
-    cout<<ans<<endl;
+    // int ans = 1; 
+    // for(int i = n ; i  >= 1 ;i--){
+    //     ans = ans * i;   
+    // }
+    // cout<<ans<<endl;
+    cout<<factorial(n)<<endl;
 }
