@@ -4,6 +4,7 @@ using namespace std;
 bool check(char a, char b)
 {
     // write the function here
+    return !(a ^ b);
 }
 
 int main()
