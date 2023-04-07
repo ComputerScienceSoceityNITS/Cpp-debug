@@ -5,6 +5,7 @@ using namespace std;
 
 int second_largest_number(vector<int>& nums) {
     int n = nums.size();
+
     int largest = -1e5;
     int second_largest = -1e5;
     for (int i = 0; i < n; i++) {
@@ -26,6 +27,9 @@ int main() {
     vector<int> nums(n);
     for(int i = 0 ; i  < n ;i++){
         cin>>nums[i];
+    }
+    if(n<2){
+        cout<<"Invalid input!!"<<endl;
     }
     cout << "The second largest number in the array is: " << second_largest_number(nums) << endl;
     return 0;
