@@ -22,7 +22,14 @@ int main()
         cin >> a >> b;
 
 //complete the code
-
+    if ((x + y) % 2 == 0)  // check if sum of x and y is even
+        {
+            cout << "YES\n";
+        }
+        else
+        {
+            cout << "NO\n";
+        }
 
     }
     return 0;
