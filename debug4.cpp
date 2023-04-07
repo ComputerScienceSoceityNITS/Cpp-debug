@@ -3,17 +3,17 @@ using namespace std;
 
 int q(int arr[], int l, int r, int x)
 {
-    if (r >= l)
+    while (l <= r)
     {
         int o = l + (r - l) / 2;
 
         if (arr[o] == x)
             return o;
 
-        if (arr[o] > x)
-            return q(arr, l, o - 1, x);
-
-        return q(arr, o + 1, r, x);
+        if (arr[o] < x)
+            l = o + 1;
+        else
+            r = o - 1;
     }
 
     return -1;
