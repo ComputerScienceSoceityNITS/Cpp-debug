@@ -33,10 +33,10 @@ void takeTurn() {
 }
 
 void switchPlayer() {
-   if (player == 'X') {
-      player = 'X';
-   } else {
+   if (player == 'X') { // issue-1 corrected here
       player = 'O';
+   } else {
+      player = 'X';
    }
 }
 
