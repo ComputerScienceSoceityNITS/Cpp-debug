@@ -12,6 +12,27 @@ void print_vec(const std::vector<int> &vec)
 std::vector<int> merge_sorted(const std::vector<int> &vec1, const std::vector<int> &vec2)
 {
     //write the function here
+        std::vector<int> merged;
+    int i = 0, j = 0;
+    while (i < vec1.size() && j < vec2.size()) {
+        if (vec1[i] < vec2[j]) {
+            merged.push_back(vec1[i]);
+            i++;
+        }
+        else {
+            merged.push_back(vec2[j]);
+            j++;
+        }
+    }
+    while (i < vec1.size()) {
+        merged.push_back(vec1[i]);
+        i++;
+    }
+    while (j < vec2.size()) {
+        merged.push_back(vec2[j]);
+        j++;
+    }
+    return merged;
 }
 
 int main()
