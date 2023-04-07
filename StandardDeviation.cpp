@@ -16,8 +16,13 @@ double mean(const std::vector<double>& vec) {
 }
 
 double standard_deviation(const std::vector<double>& vec) {
- //complete the function
-}
+  double dev=0.0;
+  for (double elem : vec) {
+    dev += (elem- mean(vec))*(elem- mean(vec));
+  }
+  double answer= sqrt(dev/vec.size());
+  return answer;
+  }
 
 int main() {
   double d = distance(0.0, 0.0, 1.0, 1.0);
