@@ -3,7 +3,15 @@
 using namespace std;
 string insert_space(string text)
 {
-    // write the function code here
+    string res;
+    res=text[0];
+    for(int i=1;text[i]!='\0';i++){
+        if((text[i]>='A'&&text[i]<='Z')&&(text[i-1]>='a'&&text[i-1]<='z')){
+            res+=" ";
+        }
+        res+=text[i];
+    }
+    return res;
 }
 
 int main()
