@@ -4,6 +4,26 @@
 
 using namespace std;
 
+// Add two numbers
+float add(float num1, float num2) {
+    return num1 + num2;
+}
+
+// Subtract two numbers
+float subtract(float num1, float num2) {
+    return num1 - num2;
+}
+
+// Multiply two numbers
+float multiply(float num1, float num2) {
+    return num1 * num2;
+}
+
+// Divide two numbers
+float divide(float num1, float num2) {
+    return num1 / num2;
+}
+
 int main() {
     // Declare variables
     float num1, num2, result;
@@ -22,20 +42,20 @@ int main() {
     // Perform calculation
     switch(op) {
         case '+':
-            result = num1 + num2;
+            result = add(num1,num2);
             break;
         case '-':
-            result = num1 - num2;
+            result = subtract(num1,num2);
             break;
         case '*':
-            result = num1 * num2;
+            result = multiply(num1,num2);
             break;
         case '/':
             if (num2 == 0) {
                 cerr << "Error: division by zero\n";
                 return 1;
             }
-            result = num1 / num2;
+            result = divide(num1,num2);
             break;
         default:
             cerr << "Error: invalid operator\n";
