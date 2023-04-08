@@ -17,6 +17,16 @@ double mean(const std::vector<double>& vec) {
 
 double standard_deviation(const std::vector<double>& vec) {
  //complete the function
+double avg=mean(vec);
+double summation =0;
+
+for(int i=0;i<vec.size();i++){
+  summation+=pow(vec[i]-avg,2);
+}
+
+double stddev=sqrt(summation/(vec.size()-1));
+return stddev;
+
 }
 
 int main() {
