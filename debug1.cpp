@@ -7,8 +7,10 @@ int count_vowels(string str) { //function to count vowels
     int count = 0;//initialsing count
     for (int i = 0; i < str.length(); i++) { //loop to iterate all the characters of the string 
         char c = tolower(str[i]);//to convert all the uppercase to lowercase
+        if(c>=97 && c<=122){
         if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {//for checking the vowels 
             count++;//incrementing the count ,if the char is a vowel
+        }
         }
     }
     return count;//return the count of vowels
