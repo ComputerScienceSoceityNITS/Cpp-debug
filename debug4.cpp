@@ -1,23 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int q(int arr[], int l, int r, int x)
+int q(int arr[], int l/*start*/, int r/*end*/, int x/*target*/)
 {
-    if (r >= l)
+    // if (r >= l)
+    // {
+    //     int o = l + (r - l) / 2;
+
+    //     if (arr[o] == x)
+    //         return o;
+
+    //     if (arr[o] > x)
+    //         return q(arr, l, o - 1, x);
+
+    //     return q(arr, o + 1, r, x);
+    // }
     {
-        int o = l + (r - l) / 2;
-
-        if (arr[o] == x)
-            return o;
-
-        if (arr[o] > x)
-            return q(arr, l, o - 1, x);
-
-        return q(arr, o + 1, r, x);
-    }
+        while(l<=r){
+            int o/*mid*/ = l + (r - l) / 2;
+            
+            if(arr[o] > x){
+                r = o - 1;
+            }
+            else if(arr[o] < x){
+                l = o + 1;
+            }
+            else 
+                return o;
+        
+        }
 
     return -1;
-}
+}}
 
 int main(void)
 {
