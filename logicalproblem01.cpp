@@ -22,6 +22,12 @@ int main()
         cin >> a >> b;
 
 //complete the code
+if(abs(b-a)%2==0){
+    cout<<"Yes"<<endl;
+}
+else {
+    cout<<"No"<<endl;
+}
 
 
     }
