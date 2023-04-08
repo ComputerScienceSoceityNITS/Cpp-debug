@@ -4,6 +4,18 @@ using namespace std;
 string insert_space(string text)
 {
     // write the function code here
+    string newstr="";
+    newstr+=text[0];
+    for(int i=1;i<text.length();i++){
+        if((text[i]>='A' && text[i]<='Z') && (text[i-1]>='a' && text[i-1]<='z')){
+            newstr+=' '; 
+            newstr+=text[i]; 
+        }
+        else{
+            newstr+=text[i];
+        }
+    }
+    return newstr;
 }
 
 int main()
