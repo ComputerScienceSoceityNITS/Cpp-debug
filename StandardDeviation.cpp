@@ -15,8 +15,13 @@ double mean(const std::vector<double>& vec) {
   return sum / vec.size();
 }
 
-double standard_deviation(const std::vector<double>& vec) {
+double standard_deviation(const std::vector<double>& vec, double mean) {
  //complete the function
+  double sum = 0.0;
+  for (double elem : vec) {
+    sum += (elem-mean)*(elem-mean);
+  }
+  return sqrt(sum/vec.size());
 }
 
 int main() {
@@ -25,8 +30,7 @@ int main() {
   std::vector<double> vec = {1.0, 2.0, 3.0, 4.0, 5.0};
   double m = mean(vec);
   std::cout << "Mean: " << m << std::endl;
-  double s = standard_deviation(vec);
+  double s = standard_deviation(vec,m);
   std::cout << "Standard deviation: " << s << std::endl;
   return 0;
 }
-// ---------------------------ALL THE BEST-----------------------------
