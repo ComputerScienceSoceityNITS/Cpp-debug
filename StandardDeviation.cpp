@@ -17,6 +17,13 @@ double mean(const std::vector<double>& vec) {
 
 double standard_deviation(const std::vector<double>& vec) {
  //complete the function
+ double mean_value = mean(vec);
+  double variance = 0.0;
+  for (double elem : vec) {
+    variance += (elem - mean_value) * (elem - mean_value);
+  }
+  variance /= vec.size();
+  return std::sqrt(variance);
 }
 
 int main() {
