@@ -20,10 +20,22 @@ int main()
     {
         int a, b;
         cin >> a >> b;
-
-//complete the code
-
-
+        if((a+b)%2!=0){
+            cout<<"NO"<<endl;
+            continue;
+        }
+        if(a==b){
+            cout<<"YES"<<endl;
+            continue; 
+        }
+        if(abs(a-b)%2==0){
+            cout<<"YES"<<endl;
+            continue; 
+        }
+        else{
+            cout<<"NO"<<endl;
+            continue;
+        }
     }
     return 0;
 }
