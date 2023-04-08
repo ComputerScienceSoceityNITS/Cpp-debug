@@ -4,6 +4,9 @@ using namespace std;
 bool check(char a, char b)
 {
     // write the function here
+    if((a^b) != 0){
+        return true;//if xor operator is 0 then both characters are equal otherwise unequal 
+    }else return false;
 }
 
 int main()
