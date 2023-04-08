@@ -11,9 +11,13 @@ int second_largest_number(vector<int>& nums) {
         if (nums[i] > largest) {
             second_largest = largest;
             largest = nums[i];
-        } else if (nums[i] > second_largest) {
+        } else if (nums[i] > second_largest && nums[i] != largest) {
             second_largest = nums[i];
         }
+        if(largest == second_largest){
+            return largest;
+        }
+        
     }
     return second_largest;
 }
